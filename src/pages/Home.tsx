@@ -20,7 +20,7 @@ export default function Home() {
   const [usingTrending, setUsingTrending] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
   const [searchMode, setSearchMode] = useState(false)
-  const debounce = useRef<ReturnType<typeof setTimeout>>()
+  const debounce = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const fetchItems = useCallback(async (f: Filters, p: number) => {
     setLoading(true)

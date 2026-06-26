@@ -12,7 +12,7 @@ export default function MovieDetailPage() {
   const [loading, setLoading] = useState(true)
   const [showModal, setShowModal] = useState(false)
   const [dlStatus, setDlStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
-  const dlTimer = useRef<ReturnType<typeof setTimeout>>()
+  const dlTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
   const store = useStore()
 
   useEffect(() => {

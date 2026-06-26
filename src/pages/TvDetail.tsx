@@ -9,7 +9,7 @@ export default function TvDetailPage() {
   const [show, setShow] = useState<TvDetails | null>(null)
   const [loading, setLoading] = useState(true)
   const [dlStatus, setDlStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
-  const dlTimer = useRef<ReturnType<typeof setTimeout>>()
+  const dlTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   useEffect(() => {
     if (!id) return
